@@ -168,25 +168,31 @@ Write a c program to find the sum of odd digits using for loop
 ## PROGRAM:
 ```
 #include <stdio.h>
-int main()
-{
-    int a,digit,sum=0;
-    scanf("%d",&a);
-    do
-    {
-        digit=a-(a/10)*10;
-        sum+=digit;
-        a/=10;
-    }
-    while(a>0);
-    printf("%d\n",sum);
+
+int main() {
+    int num, digit, sum = 0;
+
+ 
+    printf("Enter an integer: ");
+    scanf("%d", &num);
+
     
+    for (; num != 0; num /= 10) {
+        digit = num % 10;           
+        if (digit % 2 != 0)         
+            sum += digit;      
+    }
+
+   
+    printf("Sum of odd digits = %d\n", sum);
+
+    return 0;
 }
+
 ```
 
 ## OUTPUT:
-![Screenshot 2025-04-27 163628](https://github.com/user-attachments/assets/abd464a5-f78d-4ea8-b485-04c34a1451f9)
-
+![Screenshot 2025-05-30 094430](https://github.com/user-attachments/assets/cec5ff7d-2603-48ad-8ab0-e6b4b8da3e16)
 
 
 
